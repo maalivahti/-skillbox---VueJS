@@ -16,24 +16,30 @@
 
     <ul class="colors colors--black">
       <li class="colors__item">
-        <label class="colors__label" for="color-1">
-          <input class="colors__radio sr-only" type="radio" name="color-1"
+        <!--eslint-disable-next-line-->
+        <label class="colors__label">
+          <input class="colors__radio sr-only" type="radio"
                  value="#73B6EA"
-                 checked="">
+                  v-model="color">
           <span class="colors__value" style="background-color: #73B6EA;"></span>
         </label>
       </li>
       <li class="colors__item">
-        <label class="colors__label" for="color-1">
-          <input class="colors__radio sr-only" type="radio" name="color-1"
-                 value="#8BE000">
+        <!--eslint-disable-next-line-->
+        <label class="colors__label">
+          <input class="colors__radio sr-only" type="radio"
+                 value="#8BE000"
+                  v-model="color">
           <span class="colors__value" style="background-color: #8BE000;"></span>
         </label>
       </li>
       <li class="colors__item">
-        <label class="colors__label" for="color-1">
-          <input class="colors__radio sr-only" type="radio" name="color-1"
-                 value="#222">
+        <!--eslint-disable-next-line-->
+        <label class="colors__label">
+          <!--eslint-disable-next-line-->
+          <input class="colors__radio sr-only" type="radio"
+                 value="#222"
+                  v-model="color">
           <span class="colors__value" style="background-color: #222;"></span>
         </label>
       </li>
@@ -45,6 +51,11 @@
 export default {
   name: 'ProductItem',
   props: ['product'],
+  data() {
+    return {
+      color: '#73B6EA',
+    };
+  },
 };
 </script>
 
