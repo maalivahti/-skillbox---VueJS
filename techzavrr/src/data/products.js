@@ -13,7 +13,7 @@ export default [
     image: './img/huawei-matebook-d.jpg',
     id: 'a00002',
     categoryId: 1,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#73B6EA', '#8BE000', '#FFBE15'],
   },
   {
     title: 'Ноутбук Lenovo V15 G2 ITL',
@@ -21,7 +21,7 @@ export default [
     image: './img/lenovo-v15-itl.jpg',
     id: 'a00003',
     categoryId: 1,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#FFBE15', '#8BE000', '#222'],
   },
   {
     title: 'Смартфон Huawei Nova 9 SE 8',
@@ -29,7 +29,7 @@ export default [
     image: './img/huawei-nove-9.jpg',
     id: 'a00004',
     categoryId: 2,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#73B6EA', '#8BE000', '#939393'],
   },
   {
     title: 'Смартфон Apple iPhone 14 128Gb',
@@ -37,7 +37,7 @@ export default [
     image: './img/iphone-14.jpg',
     id: 'a00005',
     categoryId: 2,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#73B6EA', '#939393', '#222'],
   },
   {
     title: 'Смартфон Honor X8 6/128Gb',
@@ -45,7 +45,7 @@ export default [
     image: './img/honor-x8.jpg',
     id: 'a00006',
     categoryId: 2,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#939393', '#8BE000', '#222'],
   },
   {
     title: '55" Телевизор LG OLED55B1RLA, OLED, 4K Ultra HD',
@@ -53,7 +53,7 @@ export default [
     image: './img/lg-oled-55.jpg',
     id: 'a00007',
     categoryId: 3,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#73B6EA', '#FF6B00', '#222'],
   },
   {
     title: '50" Телевизор Xiaomi MI TV P1, 4K Ultra HD',
@@ -61,7 +61,7 @@ export default [
     image: './img/xiaomi-mi-tv.jpg',
     id: 'a00008',
     categoryId: 3,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#73B6EA', '#FFBE15', '#222'],
   },
   {
     title: 'Процессор Intel Core i5 11400F',
@@ -69,7 +69,7 @@ export default [
     image: './img/intel-i5-11400.jpg',
     id: 'a00009',
     categoryId: 4,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#FFF', '#8BE000', '#222'],
   },
   {
     title: 'Процессор AMD Ryzen 5 5600X',
@@ -77,7 +77,7 @@ export default [
     image: './img/amd-ryzen-5.jpg',
     id: 'a00010',
     categoryId: 4,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#939393', '#FFBE15', '#222'],
   },
   {
     title: 'Материнская плата MSI MAG B560M MORTAR WIFI',
@@ -93,6 +93,6 @@ export default [
     image: './img/gigabyte-3070ti.jpg',
     id: 'a00012',
     categoryId: 4,
-    colors: ['#73B6EA', '#8BE000', '#222'],
+    colors: ['#FFBE15', '#73B6EA', '#939393'],
   },
 ];
