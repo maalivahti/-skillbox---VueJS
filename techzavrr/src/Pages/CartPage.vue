@@ -49,11 +49,15 @@
 <script>
 
 import CartItem from '@/components/CartItem.vue';
+import numberFormat from '@/helpers/numberFormat';
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'CartPage',
   components: { CartItem },
+  filters: {
+    numberFormat,
+  },
   computed: {
     ...mapGetters({ products: 'cartDetailProducts', totalPrice: 'cartTotalPrice' }),
   },
