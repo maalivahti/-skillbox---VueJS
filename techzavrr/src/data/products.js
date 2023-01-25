@@ -2,7 +2,7 @@ export default [
   {
     title: 'Ноутбук ASUS Vivobook 15 V5200',
     price: 35990,
-    image: './img/asus-vivobook-v5200.jpg',
+    image: '/img/asus-vivobook-v5200.jpg',
     id: 'a00001',
     categoryId: 1,
     colors: ['#73B6EA', '#FF6B00', '#222'],
@@ -10,7 +10,7 @@ export default [
   {
     title: 'Ноутбук Huawei MateBook D 15',
     price: 56990,
-    image: './img/huawei-matebook-d.jpg',
+    image: '/img/huawei-matebook-d.jpg',
     id: 'a00002',
     categoryId: 1,
     colors: ['#73B6EA', '#8BE000', '#FFBE15'],
@@ -18,7 +18,7 @@ export default [
   {
     title: 'Ноутбук Lenovo V15 G2 ITL',
     price: 44990,
-    image: './img/lenovo-v15-itl.jpg',
+    image: '/img/lenovo-v15-itl.jpg',
     id: 'a00003',
     categoryId: 1,
     colors: ['#FFBE15', '#8BE000', '#222'],
@@ -26,7 +26,7 @@ export default [
   {
     title: 'Смартфон Huawei Nova 9 SE 8',
     price: 20990,
-    image: './img/huawei-nove-9.jpg',
+    image: '/img/huawei-nove-9.jpg',
     id: 'a00004',
     categoryId: 2,
     colors: ['#73B6EA', '#8BE000', '#939393'],
@@ -34,7 +34,7 @@ export default [
   {
     title: 'Смартфон Apple iPhone 14 128Gb',
     price: 77090,
-    image: './img/iphone-14.jpg',
+    image: '/img/iphone-14.jpg',
     id: 'a00005',
     categoryId: 2,
     colors: ['#73B6EA', '#939393', '#222'],
@@ -42,7 +42,7 @@ export default [
   {
     title: 'Смартфон Honor X8 6/128Gb',
     price: 15990,
-    image: './img/honor-x8.jpg',
+    image: '/img/honor-x8.jpg',
     id: 'a00006',
     categoryId: 2,
     colors: ['#939393', '#8BE000', '#222'],
@@ -50,7 +50,7 @@ export default [
   {
     title: '55" Телевизор LG OLED55B1RLA, OLED, 4K Ultra HD',
     price: 134990,
-    image: './img/lg-oled-55.jpg',
+    image: '/img/lg-oled-55.jpg',
     id: 'a00007',
     categoryId: 3,
     colors: ['#73B6EA', '#FF6B00', '#222'],
@@ -58,7 +58,7 @@ export default [
   {
     title: '50" Телевизор Xiaomi MI TV P1, 4K Ultra HD',
     price: 34990,
-    image: './img/xiaomi-mi-tv.jpg',
+    image: '/img/xiaomi-mi-tv.jpg',
     id: 'a00008',
     categoryId: 3,
     colors: ['#73B6EA', '#FFBE15', '#222'],
@@ -66,7 +66,7 @@ export default [
   {
     title: 'Процессор Intel Core i5 11400F',
     price: 13290,
-    image: './img/intel-i5-11400.jpg',
+    image: '/img/intel-i5-11400.jpg',
     id: 'a00009',
     categoryId: 4,
     colors: ['#FFF', '#8BE000', '#222'],
@@ -74,7 +74,7 @@ export default [
   {
     title: 'Процессор AMD Ryzen 5 5600X',
     price: 15990,
-    image: './img/amd-ryzen-5.jpg',
+    image: '/img/amd-ryzen-5.jpg',
     id: 'a00010',
     categoryId: 4,
     colors: ['#939393', '#FFBE15', '#222'],
@@ -82,7 +82,7 @@ export default [
   {
     title: 'Материнская плата MSI MAG B560M MORTAR WIFI',
     price: 12790,
-    image: './img/msi-mag-motar.jpg',
+    image: '/img/msi-mag-motar.jpg',
     id: 'a00011',
     categoryId: 4,
     colors: ['#73B6EA', '#8BE000', '#222'],
@@ -90,7 +90,7 @@ export default [
   {
     title: 'Видеокарта GIGABYTE NVIDIA GeForce RTX 3070TI',
     price: 57990,
-    image: './img/gigabyte-3070ti.jpg',
+    image: '/img/gigabyte-3070ti.jpg',
     id: 'a00012',
     categoryId: 4,
     colors: ['#FFBE15', '#73B6EA', '#939393'],
