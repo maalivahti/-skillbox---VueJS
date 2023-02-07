@@ -1,7 +1,7 @@
 <template>
   <li class="cart__item product">
     <div class="product__pic">
-      <img :src="item.product.image"
+      <img :src="item.product.image.file.url"
            width="120"
            height="120"
            :alt="item.product.title">
@@ -35,7 +35,7 @@
 <script>
 import numberFormat from '@/helpers/numberFormat';
 import ProductCount from '@/components/ProductCount.vue';
-import { mapMutations } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'CartItem',
@@ -51,13 +51,13 @@ export default {
         return this.item.amount;
       },
       set(value) {
-        this.$store.commit('upgradeCartProductAmount', { productId: this.item.productId, amount: value });
+        this.$store.dispatch('updateCartProductAmount', { productId: this.item.productId, amount: value });
       },
     },
   },
 
   methods: {
-    ...mapMutations({ deleteProduct: 'deleteCartProduct' }),
+    ...mapActions({ deleteProduct: 'deleteCartProduct' }),
   },
 };
 </script>

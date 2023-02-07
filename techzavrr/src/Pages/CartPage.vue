@@ -1,16 +1,18 @@
 <template>
-  <main class="content container">
+  <main class="content container spinner spinner-page" v-if="cartLoading"></main>
+  <main class="content container" v-else-if="cartLoadFailed">Не удалось загрузить корзину!</main>
+  <main class="content container" v-else>
     <div class="content__top">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">
+          <router-link class="breadcrumbs__link" href="#" :to="{ name: 'main' }">
             Каталог
-          </a>
+          </router-link>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link">
+          <router-link class="breadcrumbs__link" href="#" :to="{ name: 'cart' }">
             Корзина
-          </a>
+          </router-link>
         </li>
       </ul>
 
@@ -50,9 +52,15 @@
 
 import CartItem from '@/components/CartItem.vue';
 import numberFormat from '@/helpers/numberFormat';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
+  data() {
+    return {
+      cartLoading: false,
+      cartLoadFailed: false,
+    };
+  },
   name: 'CartPage',
   components: { CartItem },
   filters: {
@@ -60,6 +68,22 @@ export default {
   },
   computed: {
     ...mapGetters({ products: 'cartDetailProducts', totalPrice: 'cartTotalPrice' }),
+  },
+  methods: {
+    ...mapActions(['loadCart']),
+
+    displayCartPagePreloader() {
+      this.cartLoading = true;
+      this.cartLoadFailed = false;
+
+      this.loadCart()
+        .then(() => {
+          this.cartLoading = false;
+        });
+    },
+  },
+  created() {
+    this.displayCartPagePreloader();
   },
 };
 </script>

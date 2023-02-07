@@ -27,7 +27,8 @@ export default {
   },
   methods: {
     changeAmount() {
-      this.$emit('update:productAmount', +this.amount);
+      this.$emit('update:productAmount', Math.abs(+this.amount));
+      this.amount = Math.abs(+this.amount);
     },
 
     increment() {
@@ -35,8 +36,10 @@ export default {
       this.changeAmount();
     },
     decrement() {
-      this.amount -= 1;
-      this.changeAmount();
+      if (this.amount !== 0) {
+        this.amount -= 1;
+        this.changeAmount();
+      }
     },
   },
 };

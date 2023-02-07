@@ -16,6 +16,8 @@
         :category-id.sync="filterCategoryId"
         :color-id.sync="filterColorId"/>
       <section class="catalog">
+        <div class="spinner" v-if="productsLoading" ></div>
+        <div v-if="productsLoadingError">Произошла ошиюбка при загрузке товаров...</div>
         <ProductList :products="products"/>
         <BasePagination v-model="page" :count="countProducts" :per-page="productsPerPage"/>
       </section>
@@ -44,6 +46,9 @@ export default {
       productsPerPage: 6,
 
       productsData: null,
+
+      productsLoading: true,
+      productsLoadingError: false,
     };
   },
 
@@ -65,6 +70,9 @@ export default {
 
   methods: {
     loadProducts() {
+      this.productsLoading = true;
+      this.productsLoadingError = false;
+
       clearTimeout(this.loadProductTimer);
       this.loadProductTimer = setTimeout(() => {
         axios.get(`${API_BASE_URL}/api/products`, {
@@ -77,9 +85,9 @@ export default {
             maxPrice: this.filterPriceTo,
           },
         })
-          .then((response) => {
-            this.productsData = response.data;
-          });
+          .then((response) => { this.productsData = response.data; })
+          .catch(() => { this.productsLoadingError = true; })
+          .then(() => { this.productsLoading = false; });
       }, 0);
     },
   },
@@ -101,9 +109,13 @@ export default {
     filterCategoryId() {
       this.loadProducts();
     },
-    filterColor() {
+    filterColorId() {
       this.loadProducts();
     },
   },
 };
 </script>
+
+<style lang="scss">
+
+</style>
